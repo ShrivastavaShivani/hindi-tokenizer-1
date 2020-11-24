@@ -32,10 +32,10 @@ class Tokenizer():
 	def print_sentences(self,sentences=None):
 		if sentences:
 			for i in sentences:
-				print i.encode('utf-8')
+				print(i.encode('utf-8'))
 		else:
 			for i in self.sentences:
-				print i.encode('utf-8')
+				print(i.encode('utf-8'))
 
 
 	def clean_text(self):
@@ -91,10 +91,10 @@ class Tokenizer():
 		'''done'''
 		if print_list is None:
 			for i in self.tokens:
-				print i.encode('utf-8')
+				print(i.encode('utf-8'))
 		else:
 			for i in print_list:
-				print i.encode('utf-8')
+				print(i.encode('utf-8'))
 
 
 	def tokens_count(self):
@@ -137,7 +137,7 @@ class Tokenizer():
 	def print_freq_dict(self,freq):
 		'''done'''
 		for i in freq.keys():
-			print i.encode('utf-8'),',',freq[i]
+			print(i.encode('utf-8'),',',freq[i])
 
 	def generate_stem_words(self,word):
 		suffixes = {
@@ -208,4 +208,4 @@ if __name__=="__main__":
 	# 	print i.encode('utf-8'),f[i].encode('utf-8')
 	z=t.remove_stop_words()
 	t.print_tokens(t.final_tokens)
-	print t.sentence_count(),t.tokens_count(),t.len_text()
+	print(t.sentence_count(),t.tokens_count(),t.len_text())
